@@ -1,0 +1,27 @@
+@model IEnumerable<CadastroUsuariosEF.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Lista de Usuários";
+}
+
+<h1>Usuários</h1>
+
+<a class="btn btn-primary mb-3" href="/Usuario/Create">Novo Usuário</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
